@@ -1,0 +1,129 @@
+.header-wrapper {
+	background: $header-color;
+	border-bottom: 7px solid $lime;
+	position: relative;
+	z-index: 9999;
+}
+// utility nav
+.utility-nav {
+	ul.social {
+		float: left;
+		margin: 11px 0 0 0;
+		li {
+			display: inline-block;
+			font-size: 20px;
+			padding: 5px;
+			i {
+				color: #fff;
+			}
+		}
+	}
+	ul.util-nav {
+		float: right;
+		li {
+			display: inline-block;
+			a {
+				color: #fff;
+				padding: 18px 20px;
+				display: block;
+				text-transform: uppercase;
+				font-family: $open-sans;
+				font-size: 10px;
+			}
+			&:nth-last-of-type(-n + 2) {
+				a {
+					font-weight: bold;
+					background: $link-bg;
+					border-right: 1px solid $header-color;
+				}
+			}
+		}
+	}
+}
+.logo-wrapper {
+	float: left;
+
+	@media (min-width: $md) {
+		width: 275px;
+		margin: 0 0 -20px 0;
+	}
+	@media (min-width: $lg) {
+		width: auto;
+		margin: 0 0 -50px 0;
+	}
+}
+
+// main navigation
+.main-nav-wrapper {
+	margin: 0 0 0 275px;
+	@media (min-width: $lg) {
+		margin: 0 0 0 379px;
+	}
+	ul#menuElem {
+		font-size: 0;
+		> li {
+			display: inline-block;
+			width: 16.6%;
+			position: relative;
+			> a {
+				font-family: $open-sans;
+				font-weight: 600;
+				color: #fff;
+				font-size: 14px;
+				display: block;
+				padding: 10px 7px;
+				text-align: center;
+				@media (min-width: $lg) {
+					padding: 10px 16px;
+				}
+			}
+			&:first-child > a {
+				padding: 10px 30px;
+				@media (min-width: $lg) {
+					padding: 10px 35px;
+				}
+			}
+			&:last-child > a {
+				padding: 10px 20px;
+				@media (min-width: $lg) {
+					padding: 10px 30px;
+				}
+			}
+			&:nth-last-of-type(-n + 2) ul {
+				left: auto;
+				right: 0;
+			}
+			&:hover {
+				> a {
+					color: $lime;
+				}
+				ul {
+					display: block;
+					opacity: 1;
+				}
+			}
+			ul {
+				font-size: 14px;
+				width: 150%;
+				transition: opacity 0.25s linear;
+				opacity: 0;
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background: rgba(255,255,255,0.85);
+				border-top: 7px solid $lime;
+				li {
+					a {
+						color: #27282a;
+						padding: 5px 10px;
+						display: block;
+						&:hover {
+							background: $lemon;
+						}
+					}
+				}
+			}
+		}
+	}
+}
