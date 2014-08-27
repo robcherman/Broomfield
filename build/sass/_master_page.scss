@@ -12,9 +12,19 @@
 		li {
 			display: inline-block;
 			font-size: 20px;
-			padding: 5px;
-			i {
+			a {
+				padding: 5px;
 				color: #fff;
+				&:hover {
+					color: $lime;
+				}
+			}
+			i.fa-search {
+				color: #fff;
+				cursor: pointer;
+				&:hover {
+					color: $lime;
+				}
 			}
 		}
 	}
@@ -121,6 +131,85 @@
 						&:hover {
 							background: $lemon;
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// footer
+.footer-wrapper {
+	background: $header-color;
+	border-top: 4px solid #2d3d71;
+	padding: 30px 0;
+	.logo {
+		text-align: center;
+		position: relative;
+		left: -45px;
+		img {
+			position: absolute;
+			top: -75px;
+		}
+	}
+	.office-wrapper {
+		div, a {
+			text-align: center;
+			font-size: 14px;
+			color: #fff;
+			display: block;
+			@media (min-width: $sm) {
+				text-align: right;
+			}
+			&:first-child {
+				font-size: 18px;
+			}
+		}
+		a {
+			&:hover {
+				color: $lime;
+			}
+		}
+	}
+}
+
+// sitemap
+.sitemap-wrapper {
+	background: $header-color;
+	padding: 20px 0;
+	.button-wrapper {
+		text-align: center;
+		border-top: 1px solid rgba(255,255,255,0.4);
+		padding: 10px 0;
+		.button {
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				color: $lime;
+			}
+		}
+	}
+	.CMSSiteMapList {
+		display: none;
+		.CMSSiteMapListItem {
+			display: inline-block;
+			width: 15%;
+			margin: 0 1.6% 0 0;
+			vertical-align: top;
+			a {
+				color: #fff;
+				font-size: 16px;
+				display: block;
+				padding: 5px 0;
+				&:hover {
+					color: $lime;
+				}
+			}
+			.CMSSiteMapList {
+				.CMSSiteMapListItem {
+					width: 100%;
+					a {
+						font-size: 13px;
 					}
 				}
 			}

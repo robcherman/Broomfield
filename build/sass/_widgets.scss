@@ -1,0 +1,29 @@
+// downloads
+.SidebarWrapper {
+	.SidebarText {
+		display: none;
+	}
+	ul {
+		li {
+			padding: 5px 0;
+			.SidebarListMyFavorites {
+				display: none;
+			}
+			.SidebarListIcon {
+				float: left;
+				margin: 4px 0 0 0;
+			}
+			.SidebarListText {
+				margin: 0 0 0 40px;
+				a {
+					font-size: 13px;
+					color: #565656;
+					display: block;
+					&:hover {
+						color: $lime;
+					}
+				}
+			}
+		}
+	}
+}

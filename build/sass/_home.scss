@@ -1,4 +1,4 @@
-// hero slider
+// hero slider ***********************************************
 .HeroImageSlider {
 	padding: 0 0 20px 0;
 	background: $body-color;
@@ -81,9 +81,13 @@
 	}
 }
 
-// welcome message & map
+// welcome message & map ***********************************************
 .map-welcome-wrapper {
 	background: $body-color;
+	@media (min-width: $sm) {
+		box-shadow: 0px 5px 5px 0px rgba(0,0,0,.3);
+		position: relative;
+	}
 }
 .welcome-message {
 	color: #fff;
@@ -128,7 +132,7 @@
 	}
 }
 
-// connect widget
+// connect widget ***********************************************
 .connect-wrapper {
 	padding: 20px 0;
 	.ConnectWithUs {
@@ -159,6 +163,11 @@
 			font-size: 11px;
 			color: #fff;
 		}
+		.ViewAll {
+			&:hover {
+				color: $lime;
+			}
+		}
 		.Name {
 			font-size: 21px;
 			color: #fff;
@@ -171,6 +180,73 @@
 				color: #fff;
 				&:hover {
 					color: $lime;
+				}
+			}
+		}
+	}
+}
+
+// webparts ***********************************************
+.webpart-wrapper {
+	background: darken($body-color, 2%);
+	.wrapper {
+		padding: 20px 0;
+		.header {
+			font-family: $trebuchet;
+			color: #fff;
+			font-size: 25px;
+			font-weight: bold;
+			border-bottom: 4px solid #505050;
+			margin: 0 0 20px 0;
+			a {
+				font-size: 11px;
+				color: $lime;
+				float: right;
+				margin: 15px 0 0 0;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.news {
+		color: #fff;
+		.date, .description {
+			font-size: 13px;
+			font-size: 13px;
+			margin: 0 0 15px 0;
+		}
+		.title {
+			font-size: 22px;
+			line-height: 1.2;
+			margin: 0 0 10px 0;
+		}
+		.link {
+			color: $lime;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	.downloads {
+		.SidebarTitle {
+			font-family: "Trebuchet MS", sans-serif;
+			color: #fff;
+			font-size: 25px;
+			font-weight: bold;
+			border-bottom: 4px solid #505050;
+			margin: 0 0 20px 0;
+		}
+		ul {
+			li {
+				background: url(/Broomfield/images/download.png) no-repeat right center;
+				&:hover {
+					opacity: 0.8;
+				}
+				.SidebarListText {
+					a {
+						color: #fff;
+					}
 				}
 			}
 		}
