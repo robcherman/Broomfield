@@ -102,17 +102,24 @@
 			&:nth-last-of-type(-n + 2) ul {
 				left: auto;
 				right: 0;
+				li {
+					ul {
+						left: auto;
+						right: 100%;
+					}
+				}
 			}
 			&:hover {
 				> a {
 					color: $lime;
 				}
-				ul {
+				> ul {
 					display: block;
 					opacity: 1;
 				}
 			}
 			ul {
+				box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.25);
 				font-size: 14px;
 				width: 150%;
 				transition: opacity 0.25s linear;
@@ -124,12 +131,26 @@
 				background: rgba(255,255,255,0.85);
 				border-top: 7px solid $lime;
 				li {
+					position: relative;
 					a {
 						color: #27282a;
 						padding: 5px 10px;
 						display: block;
 						&:hover {
 							background: $lemon;
+						}
+					}
+					ul {
+						display: none;
+						top: 0;
+						left: 100%;
+						width: 100%;
+						border: none;
+						opacity: 1;
+					}
+					&:hover {
+						ul {
+							display: block;
 						}
 					}
 				}

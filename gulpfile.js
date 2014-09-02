@@ -37,7 +37,7 @@ gulp.task('ftp-js', function() {
 });
 
 // watch
-gulp.task('watch-sass', function() {
+gulp.task('watch', function() {
 	// what to watch
 	gulp.watch('build/sass/*.scss', function() {
 		// what to run

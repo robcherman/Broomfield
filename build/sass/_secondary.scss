@@ -1,0 +1,118 @@
+.secondary-wrapper {
+	background: $body-dark;
+	.secondary-content {
+		background: #fff;
+	}
+	.nav-wrapper {
+		.section-header {
+			margin: 20px 0 10px;
+			@media (min-width: $md) {
+
+			}
+			@media (min-width: $lg) {
+				margin-top: 60px;
+			}
+			a {
+				font-family: $trebuchet;
+				font-size: 25px;
+				font-weight: bold;
+				color: $lime;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+		ul#menuElem {
+			li {
+				a {
+					font-size: 12px;
+					color: #fff;
+					font-weight: bold;
+					display: block;
+					padding: 5px 0;
+					&:hover {
+						color: $lime;
+					}
+				}
+				ul {
+					display: none;
+					padding: 0 0 0 15px;
+				}
+				&.HighLighted {
+					ul {
+						display: block;
+					}
+					> a {
+						color: $lime;
+					}
+				}
+			}
+		}
+	}
+	.header-image-wrapper {
+		margin: 0 0 0 -15px;
+		border-bottom: 4px solid $link-bg;
+	}
+
+	// editable text
+	.editable-text {
+		h1, h2, h3, h4, h5, h6 {
+			font-family: $trebuchet;
+			color: $header-text;
+			font-weight: bold;
+		}
+		h1 {
+			font-size: 40px;
+		}
+		h2 {
+			font-size: 25px;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 16px;
+		}
+		h5 {
+			font-size: 14px;
+		}
+		h6 {
+			font-size: 12px;
+		}
+		li {
+			padding: 2px 0;
+		}
+		a {
+			color: #3a52a3;
+			font-size: 13px;
+			&:hover {
+				color: $lime;
+			}
+		}
+		p, div {
+			font-family: $arial;
+			font-size: 13px;
+			color: #666666;
+		}
+	}
+}
+
+// my favorites
+.PageUtility {
+	.PageUtility_Wrapper {
+		width: 345px;
+		#Utility_MyFavorites, #Utility_AddPage, #Utility_Print {
+			border: none;
+			.ImgBg {
+				background: #3a52a3;
+				top: 12px;
+			}
+			&:hover {
+				color: $lime;
+			}
+		}
+	}
+	.PageUtility_Dropdown {
+		box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
+	}
+}

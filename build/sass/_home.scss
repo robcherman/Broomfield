@@ -84,10 +84,6 @@
 // welcome message & map ***********************************************
 .map-welcome-wrapper {
 	background: $body-color;
-	@media (min-width: $sm) {
-		box-shadow: 0px 5px 5px 0px rgba(0,0,0,.3);
-		position: relative;
-	}
 }
 .welcome-message {
 	color: #fff;
@@ -133,11 +129,8 @@
 }
 
 // connect widget ***********************************************
+
 .connect-wrapper {
-	padding: 20px 0;
-	.ConnectWithUs {
-		min-height: 150px;
-	}
 	.widget-title {
 		font-family: $trebuchet;
 		color: #fff;
@@ -146,6 +139,9 @@
 		border-bottom: 4px solid #505050;
 		margin: 0 0 20px 0;
 	}
+}
+.ConnectWithUs {
+	min-height: 150px;
 	.Staff {
 		.Photo {
 			padding: 2px;
@@ -157,7 +153,21 @@
 			}
 		}
 		.Controls {
-
+			span {
+				cursor: pointer;
+				.fa-stack-2x {
+					color: $lime;
+				}
+				.fa-stack-1x {
+					color: #fff;
+				}
+				&:hover {
+					.fa-stack-2x
+					{
+						color: $lemon;
+					}
+				}
+			}
 		}
 		.ViewAll, .Title {
 			font-size: 11px;
@@ -188,7 +198,8 @@
 
 // webparts ***********************************************
 .webpart-wrapper {
-	background: darken($body-color, 2%);
+	background: $body-dark;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,.3) inset;
 	.wrapper {
 		padding: 20px 0;
 		.header {
@@ -246,6 +257,49 @@
 				.SidebarListText {
 					a {
 						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+// carousel
+.carousel-wrapper {
+	padding: 20px 0;
+	background: $body-color;
+	.header {
+		font-family: $trebuchet;
+		color: #fff;
+		font-size: 25px;
+		font-weight: bold;
+		border-bottom: 4px solid #505050;
+		margin: 0 0 20px 0;
+	}
+	.owl-controls {
+		.owl-buttons {
+			margin-top: -33px;
+			.owl-prev, .owl-next {
+				font-size: 30px;
+				color: $lite-grey;
+				background: none;
+			}
+			.owl-prev {
+				margin-right: 20px;
+			}
+			.owl-next {
+				margin-left: 20px;
+			}
+		}
+		.owl-pagination {
+			.owl-page {
+				span {
+					margin: 4px;
+					background: $lite-grey;
+				}
+				&.active {
+					span {
+						background: $lime;
 					}
 				}
 			}

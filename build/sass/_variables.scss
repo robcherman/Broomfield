@@ -1,15 +1,19 @@
 // colors
 $header-color: #0a1d41;
 $body-color: #1c2537;
+$body-dark: darken($body-color, 2%);
 $link-bg: #2d3d71;
 $lime: #bac532;
 $lemon: #d0db42;
+$lite-grey: #a6a8ac;
+$header-text: #363636;
 
 // fonts
 $open-sans: 'Open Sans', sans-serif;
 $archivo: 'Archivo Narrow', sans-serif;
 $trebuchet: 'Trebuchet MS', sans-serif;
 $awesome: 'FontAwesome';
+$arial: 'Arial', arial, sans-serif;
 
 // media queries
 $lg: 1200px;
