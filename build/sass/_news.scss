@@ -1,0 +1,20 @@
+.news-list {
+	.news-item {
+		padding: 20px 0;
+		.date, .description {
+			font-size: 13px;
+			margin: 0 0 10px 0;
+		}
+		.title {
+			font-size: 22px;
+			line-height: 1.2;
+			margin: 0 0 10px 0;
+		}
+		.link {
+			color: $lime;
+			&:hover {
+				color: $header-color;
+			}
+		}
+	}
+}

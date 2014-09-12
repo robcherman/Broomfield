@@ -1,7 +1,8 @@
 // hero slider ***********************************************
 .HeroImageSlider {
-	padding: 0 0 20px 0;
-	background: $body-color;
+	//padding: 0 0 20px 0;
+	//background: $body-color;
+	border-bottom: 5px solid $link-bg;
 	.rsDefault,
 	.rsDefault .rsOverflow,
 	.rsDefault .rsSlide,
@@ -63,6 +64,7 @@
 	.rsDefault .rsBullets {
 		position: static;
 		background: $body-color;
+		margin: 5px 0 0 0;
 		.rsBullet {
 			cursor: pointer;
 			height: auto;
@@ -98,6 +100,9 @@
 	}
 	a {
 		color: $lime;
+		&:hover {
+			color: $lemon;
+		}
 	}
 }
 .map-wrapper {
@@ -117,10 +122,19 @@
 		display: block;
 		text-align: center;
 		padding: 7px;
+		&:hover {
+			opacity: 1;
+			background: $lime;
+		}
 		&:before {
 			content: "";
 			font-family: $awesome;
 			margin: 0 5px 0 0;
+		}
+	}
+	a {
+		&:hover {
+			opacity: 0.8;
 		}
 	}
 	img {
@@ -200,6 +214,7 @@
 .webpart-wrapper {
 	background: $body-dark;
 	box-shadow: 0px 5px 5px 0px rgba(0,0,0,.3) inset;
+	padding: 20px 0 30px 0;
 	.wrapper {
 		padding: 20px 0;
 		.header {
@@ -285,14 +300,22 @@
 				background: none;
 			}
 			.owl-prev {
-				margin-right: 20px;
+				margin-right: 35px;
+				@media (min-width: $md) {
+					margin-right: 20px;
+				}
 			}
 			.owl-next {
-				margin-left: 20px;
+				margin-left: 35px;
+				@media (min-width: $md) {
+					margin-left: 20px;
+				}
 			}
 		}
 		.owl-pagination {
 			.owl-page {
+				position: relative;
+				z-index: 99;
 				span {
 					margin: 4px;
 					background: $lite-grey;
@@ -300,6 +323,29 @@
 				&.active {
 					span {
 						background: $lime;
+					}
+				}
+			}
+		}
+	}
+	.owl-wrapper {
+		&:hover {
+			.owl-item {
+				opacity: 0.25;
+				&.owl-item {
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.owl-item {
+			transition: all 0.1s linear;
+			li {
+				a {
+					display: block;
+					img {
+						width: 100%;
 					}
 				}
 			}

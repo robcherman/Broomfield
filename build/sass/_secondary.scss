@@ -2,6 +2,7 @@
 	background: $body-dark;
 	.secondary-content {
 		background: #fff;
+		padding-bottom: 50px;
 	}
 	.nav-wrapper {
 		.section-header {
@@ -50,7 +51,7 @@
 		}
 	}
 	.header-image-wrapper {
-		margin: 0 0 0 -15px;
+		margin: 0 -15px;
 		border-bottom: 4px solid $link-bg;
 	}
 
@@ -101,7 +102,7 @@
 .PageUtility {
 	.PageUtility_Wrapper {
 		width: 345px;
-		#Utility_MyFavorites, #Utility_AddPage, #Utility_Print {
+		#Utility_MyFavorites, #Utility_AddPage, #Utility_Print, #Utility_Share {
 			border: none;
 			.ImgBg {
 				background: #3a52a3;
@@ -109,6 +110,9 @@
 			}
 			&:hover {
 				color: $lime;
+				a {
+					color: $lime;
+				}
 			}
 		}
 	}

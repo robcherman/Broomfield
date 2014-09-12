@@ -1,0 +1,114 @@
+#form {
+	min-height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9;
+}
+.MobileMenu {
+	position: relative;
+	z-index: 99999;
+	@media (min-width: $md) {
+		display: none;
+	}
+	.MobileMenuButton {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		z-index: 99;
+		i {
+			font-size: 34px;
+			color: #fff;
+		}
+	}
+	.MobileMenuPlaceholder {
+		display: none;
+	}
+}
+
+.MobileMenuWrapper {
+	width: 210px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	overflow: auto;
+	padding: 5px;
+	background: #eeeeee;
+	@media (min-width: $md) {
+		display: none;
+	}
+	ul.CMSSiteMapList {
+		li.CMSSiteMapListItem {
+			overflow: hidden;
+			margin: 0 0 5px 0;
+			&:first-child {
+				span.dropdownMobileSpacer {
+					background: url('/AtlasTemplateSite/images/house_dohickey.png') center center no-repeat #303030;
+				}
+			}
+			a.CMSSiteMapLink {
+				display: block;
+				padding: 9px 0;
+				font-size: 13px;
+				font-weight: bold;
+				color: $header-color;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			span.dropdownMobileSpacer {
+				cursor: pointer;
+				display: block;
+				height: 36px;
+				margin-right: 5%;
+				float: left;
+				width: 20%;
+				border-radius: 2px;
+				background: url('/AtlasTemplateSite/images/dohickey.png') center center no-repeat #303030;
+			}
+			span.dropdownMobileArrow {
+				cursor: pointer;
+				display: block;
+				height: 35px;
+				margin-right: 5%;
+				float: left;
+				width: 20%;
+				border-radius: 2px;
+				background:url(/CMSwebparts/AtlasAdvertising/images/mobileArrow.png) top center no-repeat #303030;
+			}
+			ul.CMSSiteMapList {
+				display: none;
+				clear: both;
+				padding: 0 0 0 10px;
+				li.CMSSiteMapListItem {
+					margin: 0;
+					a.CMSSiteMapLink {
+						padding: 5px 0;
+						display: block;
+						font-weight: normal;
+					}
+					span.dropdownMobileArrow {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	// search
+	.search-wrapper {
+		padding: 0;
+		#searchBoxMobile {
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #dddddd;
+			border-radius: 3px;
+			margin: 0 0 5px 0;
+		}
+		#searchBtnMobile {
+			display: none;
+		}
+	}
+}

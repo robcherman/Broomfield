@@ -1,11 +1,42 @@
 .header-wrapper {
 	background: $header-color;
-	border-bottom: 7px solid $lime;
 	position: relative;
 	z-index: 9999;
+	padding: 5px 0;
+	@media (min-width: $md) {
+		padding: 0;
+	}
+	&.bottom {
+		border-bottom: 7px solid $lime;
+		&.stick {
+			@media (min-width: $md) {
+				position: fixed;
+				top: 0;
+				width: 100%;
+			}
+		}
+	}
 }
 // utility nav
 .utility-nav {
+	overflow: hidden;
+	position: relative;
+	#searchBox {
+		position: absolute;
+		top: 14px;
+		left: 80px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #5f6a80;
+		padding: 2px 0 2px 25px;
+		color: #fff;
+		&:focus {
+			outline: none;
+		}
+	}
+	#searchBtn {
+		display: none;
+	}
 	ul.social {
 		float: left;
 		margin: 11px 0 0 0;
@@ -20,6 +51,8 @@
 				}
 			}
 			i.fa-search {
+				position: relative;
+				z-index: 99;
 				color: #fff;
 				cursor: pointer;
 				&:hover {
@@ -39,27 +72,54 @@
 				text-transform: uppercase;
 				font-family: $open-sans;
 				font-size: 10px;
+				&:hover {
+					background: $lime;
+					color: $header-color;
+				}
 			}
 			&:nth-last-of-type(-n + 2) {
 				a {
 					font-weight: bold;
 					background: $link-bg;
 					border-right: 1px solid $header-color;
+					&:hover {
+						background: $lime;
+					}
 				}
 			}
 		}
 	}
 }
 .logo-wrapper {
+	position: relative;
 	float: left;
-
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+	max-width: 75%;
+	&.scale {
+		@media (min-width: $md) {
+			-moz-transform: scale(0.85,0.85);
+			-ms-transform: scale(0.9,0.9);
+		    -webkit-transform: scale(0.9,0.9);
+		    transform: scale(0.9,0.9);
+		}
+		@media (min-width: $lg) {
+			-moz-transform: scale(0.85,0.85);
+			-ms-transform: scale(0.85,0.85);
+		    -webkit-transform: scale(0.85,0.85);
+		    transform: scale(0.85,0.85);
+		}
+	}
 	@media (min-width: $md) {
 		width: 275px;
 		margin: 0 0 -20px 0;
+		top: 15px;
 	}
 	@media (min-width: $lg) {
 		width: auto;
 		margin: 0 0 -50px 0;
+		top: 0;
 	}
 }
 
@@ -189,6 +249,51 @@
 		a {
 			&:hover {
 				color: $lime;
+			}
+		}
+	}
+	.newsletter-wrapper {
+		padding: 20px 0;
+		label {
+			font-family: $trebuchet;
+			color: #fff;
+			font-size: 20px;
+			display: block;
+			text-align: center;
+			margin: 0 0 5px 0;
+			@media (min-width: $md) {
+				text-align: left;
+			}
+		}
+		#newsletterBox, #newsletterBtn {
+			width: 75%;
+			margin: 0 auto;
+			display: block;
+		}
+		#newsletterBox {
+			padding: 10px;
+			margin-bottom: 5px;
+			@media (min-width: $md) {
+				width: 50%;
+				float: left;
+				margin: 0 5px 0 0;
+			}
+		}
+		#newsletterBtn {
+			background: $link-bg;
+			font-size: 17px;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			text-align: center;
+			text-transform: uppercase;
+			&:hover {
+				background: $lime;
+			}
+			@media (min-width: $md) {
+				width: 30%;
+				margin: 0;
+				float: left;
 			}
 		}
 	}
