@@ -12,4 +12,12 @@
 			border: none;
 		}
 	}
+	.SearchResults {
+		a {
+			color: $header-color;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
