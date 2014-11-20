@@ -1,6 +1,6 @@
 .news-list {
 	.news-item {
-		padding: 20px 0;
+		padding: 0 0 40px 0;
 		.date, .description {
 			font-size: 13px;
 			margin: 0 0 10px 0;
@@ -16,5 +16,37 @@
 				color: $header-color;
 			}
 		}
+	}
+}
+
+.twitter-wrapper {
+	> h2, p {
+		display: none;
+	}
+	ul {
+		li {
+			padding: 0 0 40px 0;
+			font-size: 14px;
+			b {
+				font-size: 13px;
+				margin: 0 0 10px 0;
+				font-weight: lighter;
+				display: block;
+				margin: 0;
+			}
+			a {
+				color: #bac532;
+				&:hover {
+					color: #0a1d41;
+				}
+			}
+		}
+	}
+}
+
+.news-wrapper, .twitter-wrapper {
+	.header {
+		font-size: 26px;
+		margin: 0 0 10px 0;
 	}
 }

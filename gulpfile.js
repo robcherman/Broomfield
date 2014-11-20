@@ -27,7 +27,7 @@ gulp.task('ftp-css', ['sass-to-css'], function() {
 
 // CSS ftp task
 gulp.task('ftp-js', function() {
-	return gulp.src('public/js/main.js')
+	return gulp.src('public/js/*.js')
 		.pipe(ftp({
 			host: '66.241.194.6',
 			user: 'zackp',
@@ -43,7 +43,7 @@ gulp.task('watch', function() {
 		// what to run
 		gulp.run('ftp-css');
 	});
-	gulp.watch('public/js/main.js', function() {
+	gulp.watch('public/js/*.js', function() {
 		gulp.run('ftp-js');
 	})
 });

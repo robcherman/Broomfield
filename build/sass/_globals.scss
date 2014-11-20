@@ -9,3 +9,8 @@ img {
 a:hover {
 	text-decoration: none;
 }
+.center-vertically {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}

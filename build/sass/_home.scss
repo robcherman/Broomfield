@@ -3,6 +3,9 @@
 	//padding: 0 0 20px 0;
 	//background: $body-color;
 	border-bottom: 5px solid $link-bg;
+	.rsContent {
+		display: block;
+	}
 	.rsArrow {
 		visibility: hidden;
 		@media (min-width: $sm) {
@@ -20,48 +23,56 @@
 	.rsImg.rsMainSlideImage {
 		margin: 0 !important;
 	}
-	.rsAbsoluteEl.Caption {
+	.caption-wrapper {
 		position: relative;
-		bottom: 100%;
-		left: 0;
-		width: 100%;
 		height: 100%;
-		background: rgba(10,29,65,0.8);
-		padding: 20px;
+		top: -100%;
+	}
+	.caption {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.8);
 		@media (min-width: $sm) {
-			width: 80%;
-			bottom: 90%;
+			background: transparent;
 			height: auto;
-			margin: 0 auto;
+			top: auto;
+			bottom: 50px;
 		}
-		@media (min-width: $md) {
-			width: 60%;
-		}
-		@media(min-width: $lg) {
-			width: 40%;
-		}
-	}
-	.captionTitle {
-		font-family: $archivo;
-		font-size: 32px;
-		color: #fff;
-		font-weight: bold;
-		line-height: 1;
-		margin: 0 0 10px 0;
-		@media (min-width: $sm) {
-			font-size: 48px;
-		}
-	}
-	.captionDescription {
-		font-size: 13px;
-		color: #fff;
-	}
-	.captionLink {
-		a {
-			color: $lime;
-			i {
-				margin: 0 0 0 3px;
+		.title, .description, .link {
+			left: 0;
+			width: 100%;
+			@media (min-width: $sm) {
+				width: 80%;
+				background: rgba(255, 255, 255, 0.8);
 			}
+			@media (min-width: $md) {
+				width: 60%;
+			}
+			@media (min-width: $lg) {
+				width: 40%;
+			}
+		}
+		.title {
+			font-family: $archivo;
+			font-size: 32px;
+			color: $body-color;
+			font-weight: bold;
+			line-height: 1;
+			padding: 15px;
+			@media (min-width: $sm) {
+				font-size: 48px;
+			}
+		}
+		.description {
+			font-size: 13px;
+			color: $body-color;
+			padding: 0 15px 15px 15px;
+		}
+		.link {
+			color: $lime;
 		}
 	}
 	.rsDefault .rsBullets {
@@ -252,6 +263,42 @@
 		}
 	}
 	.news {
+		> h2, > p {
+			display: none;
+		}
+		.ExternalTwitterFeed {
+			height: 250px;
+			overflow: hidden;
+			li {
+				padding: 0 0 20px 0;
+				font-size: 16px;
+				color: #fff;
+				b {
+					font-size: 13px;
+					font-weight: normal;
+					color: #fff;
+					display: block;
+					margin: 0 0 5px 0;
+					&:after {
+						content: "-";
+						color: $body-dark;
+						margin: 0 0 0 -5px;
+						font-weight: bold;
+						font-size: 18px;
+					}
+				}
+				a {
+					font-size: 13px;
+					color: #bac532;
+					display: block;
+					width: 95px;
+					margin: 10px 0 0 0;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
 		.news-item {
 			color: #fff;
 			padding: 0 0 30px 0;
