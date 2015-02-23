@@ -57,6 +57,9 @@
 
 	// editable text
 	.editable-text {
+		font-family: $arial;
+		font-size: 14px;
+		color: #666666;
 		h1, h2, h3, h4, h5, h6 {
 			font-family: $trebuchet;
 			color: $header-text;
@@ -85,15 +88,20 @@
 		}
 		a {
 			color: #3a52a3;
-			font-size: 13px;
+			font-size: 14px;
 			&:hover {
 				color: $lime;
 			}
 		}
-		p, div {
+		p, div, span {
 			font-family: $arial;
-			font-size: 13px;
+			font-size: 14px;
 			color: #666666;
+		}
+		ul {
+			list-style: disc;
+			padding: 0 0 0 20px;
+			margin: 10px 0;
 		}
 	}
 }

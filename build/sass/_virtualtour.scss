@@ -101,7 +101,7 @@ header {
 
 #fp-nav {
 	top: 125px;
-	right: 0px !important;
+	right: 10px !important;
 	@media (min-width: $md) {
 		right: 20px !important;
 	}
@@ -110,10 +110,14 @@ header {
 		height: 20px;
 		a {
 			span {
-				height: 10px;
-				width: 10px;
-				border: 3px solid #bac532;
+				height: 15px;
+				width: 15px;
+				border: 3px solid #0a1d41;
 				background: #fff;
+				@media (min-width: $md) {
+					height: 10px;
+					width: 10px;
+				}
 			}
 			&.active {
 				span {
@@ -131,7 +135,7 @@ header {
 	text-align: center;
 	z-index: 99;
 	#downBtn {
-		font-size: 32px;
+		font-size: 70px;
 		color: $lime;
 		font-weight: bold;
 		cursor: pointer;
