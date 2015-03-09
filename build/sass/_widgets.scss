@@ -33,12 +33,17 @@
 }
 
 .widget-wrapper {
-	.widget-block, .SidebarWrapper {
+	.widget-block,
+	.SidebarWrapper {
 		padding: 20px 0;
+		ul {
+			margin: 5px 0;
+		}
+	}
+	.widget-block {
 		ul {
 			list-style: disc;
 			padding: 0 0 0 20px;
-			margin: 5px 0;
 		}
 	}
 	.SidebarImage {

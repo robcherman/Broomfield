@@ -1,0 +1,11 @@
+@media print {
+  .utility-nav,
+  .main-nav-wrapper,
+  .nav-wrapper,
+  .PageUtility,
+  .newsletter-wrapper,
+  .sitemap-wrapper,
+  .MobileMenu {
+    display: none;
+  }
+}
