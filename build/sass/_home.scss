@@ -139,12 +139,13 @@
 		display: block;
 		text-align: center;
 		padding: 7px;
+		margin-bottom: 15px;
 		&:hover {
 			opacity: 1;
 			background: $lime;
 		}
 		&:before {
-			content: "";
+			content: "\f041";
 			font-family: $awesome;
 			margin: 0 5px 0 0;
 		}
