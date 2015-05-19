@@ -1,18 +1,29 @@
 {
-  "name": "Broomfield",
+  "name": "Brenham",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Brenham\r =======",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-ftp": "^1.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisdatlas/Brenham"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "0.0.9",
-    "gulp-imagemin": "^1.0.1",
-    "gulp-ruby-sass": "^0.7.1",
-    "gulp-sftp": "^0.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/chrisdatlas/Brenham/issues"
+  },
+  "homepage": "https://github.com/chrisdatlas/Brenham"
 }
