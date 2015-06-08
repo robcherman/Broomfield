@@ -25,11 +25,11 @@
 		position: absolute;
 		top: 14px;
 		left: 80px;
-		background: transparent;
+		background: #fff;
 		border: none;
 		border-bottom: 1px solid #5f6a80;
 		padding: 2px 0 2px 25px;
-		color: #fff;
+		color: #0A1D41;
 		&:focus {
 			outline: none;
 		}
@@ -53,7 +53,7 @@
 			i.fa-search {
 				position: relative;
 				z-index: 99;
-				color: #fff;
+				color: #0A1D41;
 				cursor: pointer;
 				&:hover {
 					color: $lime;
